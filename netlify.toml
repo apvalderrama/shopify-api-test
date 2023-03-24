@@ -1,6 +1,9 @@
 [build]
   command = "npm run build"
-  publish = ".next"
+  functions = "functions"
+  publish = "public"
 
-[[plugins]]
-  package = "netlify-plugin-cypress"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
